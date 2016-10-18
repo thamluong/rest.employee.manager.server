@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+	<class name="staffclient.model.Salary" table="SALARY">
+	
+		<id name="id">
+			<generator class="native"></generator>
+		</id>
+		<property name="month1" column="January"/>
+		<property name="month2" column="February" />
+		<property name="month3" column="March"/>
+		<property name="month4" column="April"/>
+		<property name="month5" column="May"/>
+		<property name="month6" column="June"/>
+		<property name="month7" column="July"/>
+		<property name="month8" column="August"/>
+		<property name="month9" column="September"/>
+		<property name="month10" column="October"/>
+		<property name="month11" column="November"/>
+		<property name="month12" column="December"/>
+		</class>
+</hibernate-mapping>  

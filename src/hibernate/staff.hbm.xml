@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+	<class name="staffserver.model.Staff" table="STAFF">
+
+		<id name="id">
+			<generator class="increment"></generator>
+		</id>
+		<property name="department" />
+		<property name="name" />
+		<property name="info" />
+		<property name="avatar" />
+		
+		 <many-to-one name="dept" column="department" cascade="all" lazy="false"
+			class="staffserver.model.Department" 
+			insert="false" update="false" />
+		<one-to-one name="listStaffCert" class="staffserver.model.ListStaffCert" />
+		<one-to-one name="position" class="staffserver.model.Position" />
+		<one-to-one name="salary" class="staffserver.model.Salary" />
+	 </class>
+</hibernate-mapping>  

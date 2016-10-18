@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+	<class name="staffserver.model.ListStaffCert" table="LIST_STAFF_CERT">
+	
+		<id name="id">
+			<generator class="native"></generator>
+		</id>
+		<property name="cert"/>
+		<property name="multi_cert"/>
+		
+		<!-- <one-to-one name="cert_name" foreign-key="cert" property-ref="id" class="staffserver.model.Cert" /> -->
+		 <many-to-one name="cert_name" column="cert" cascade="all" lazy="false"
+		class="staffserver.model.Cert" insert="false" update="false" />
+		</class>
+</hibernate-mapping>  
